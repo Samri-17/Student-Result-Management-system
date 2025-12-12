@@ -7,8 +7,38 @@
     <!-- Bootstrap CDN links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome CDN link external css -->
 </head>
 <body>
-    <h1 class="text-center bg-primary">Student Result Management System</h1>
-</body>
+    <!-- Navbar from bootstrap -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+     <div class="container"> <!-- width to the container-->
+  <a class="navbar-brand" href="#"><i class="fas fa-chalkboard me-3"></i> Student Result Management System</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav text-uppercase" > <!--hides bullet icon. in the same line-->
+      <li class="nav-item active">
+        <a class="nav-link active" href="#">Home</a> <!-- active means current page-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Student Result</a>
+            <li class="nav-item">
+        <a class="nav-link" href="#">Admin</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav> 
+<header class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/475154393_924911226457096_2366608854587020131_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NmSNpULjHnYQ7kNvwEh0BYw&_nc_oc=Adltj2v4i3H94wRNIAwoUzPofiRQgtU4pamHdVONsq8GryhslpOouyQMwUG2ktXWc8oksxDzQ1Re-2SPOViNsbaZ&_nc_zt=23&_nc_ht=scontent.fktm8-1.fna&_nc_gid=pj9xh96lH7AMKlN0UKkl3A&oh=00_Afmu8e8TEblTd5s8R0QT5MAz8bYJScvZWM4h-bl8O6kkuw&oe=69421CE6'); background-size: cover; background-position: center;">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold text-white">Student Result Management System</h1>
+        <p class="lead text-white">Welcome to the Student Result Management System. Manage and view student results efficiently.</p>
+    </div>
+</header>
+
+</body> 
 </html>
