@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from resultapp.views import index
+from resultapp.views import admin_login as admin_login, index as index, render as render ,admin_dashboard as admin_dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index, name='index') #localhost paxi khali huda index viewa call hunxa
+    path('',index, name='home'), #localhost paxi khali huda index viewa call hunxa
+    path('admin-login',admin_login, name='admin_login'),
+    path('admin_dashboard',admin_dashboard, name='admin_dashboard') #admin home page ko lagi
 ]
