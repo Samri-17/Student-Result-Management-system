@@ -1,0 +1,35 @@
+{%extends 'admin_base.html' %}
+{%load static %}
+{%block content %}
+<div class="container text-black">
+    <h2 class="mb-4"><i class="fas fa-edit"></i>Edit Class</h2>
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-{% if m.tags == " error" %}danger{% else %}{{m.tags}}{% endif %} alert-dismissible fade
+        show" role="alert">
+        {{ m }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <form method="post">
+        {% csrf_token %} <!-- CSRF token for security jango -->
+        <div class="mb-3">
+            <label for="Year" class="form-label"> Year</label>
+                <input type="text" class="form-control" id="Year" name="Year" placeholder="Enter Year" required value="{{class_obj.Year}}"> <!-- first ko dictionary ani second models.py ma field ma vako name Pre-fill with existing value. -->
+                <small class="text-muted"> eg: First,Second</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="Semester" class="form-label"> Semester</label>
+                <input type="text" class="form-control" id="Semester" name="Semester" placeholder="Enter Semester" value="{{class_obj.Semester}}"
+                    required>
+                <small class="text-muted"> eg: First,Second</small>
+        </div>
+        <button type="submit" class="btn btn-success">
+            <i class="fas fa-check-circle"></i> Submit
+
+        </button>
+    </form>
+</div>
+{%endblock content %}
