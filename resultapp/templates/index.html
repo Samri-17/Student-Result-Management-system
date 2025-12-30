@@ -1,9 +1,17 @@
 {% extends 'base.html' %} <!-- extends base.html to use navbar and footer that are common in all pages like admin-->
+{% load static %} <!-- to use static files like images,css,js-->
 {% block content %}
-<header class="py-5" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/475154393_924911226457096_2366608854587020131_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NmSNpULjHnYQ7kNvwEh0BYw&_nc_oc=Adltj2v4i3H94wRNIAwoUzPofiRQgtU4pamHdVONsq8GryhslpOouyQMwUG2ktXWc8oksxDzQ1Re-2SPOViNsbaZ&_nc_zt=23&_nc_ht=scontent.fktm8-1.fna&_nc_gid=pj9xh96lH7AMKlN0UKkl3A&oh=00_Afmu8e8TEblTd5s8R0QT5MAz8bYJScvZWM4h-bl8O6kkuw&oe=69421CE6'); background-size: cover; background-position: center;">
-    <div class="container text-center">
+<header class="py-5 position-relative" style="min-height: 400px; overflow: hidden;">
+    <!-- Background Image -->
+    <img src="{% static 'images/khwopa1.jpg' %}" alt="KHEC Background" class="position-absolute top-0 start-0 w-100 h-100" style="object-fit: cover; z-index: -2;">
+    
+    <!-- Dark Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5); z-index: -1;"></div>
+    
+    <!-- Content -->
+    <div class="container text-center position-relative pt-5" style="z-index: 1;">
         <h1 class="display-4 fw-bold text-white">KHEC Result Management System</h1>
-        <p class="lead text-white">Welcome to the Student Result Management System. Manage and view student results efficiently.</p>
+        <p class="lead text-white pt-4">Welcome to the Student Result Management System. Manage and view student results efficiently.</p>
     </div>
 </header>
 
